@@ -9,32 +9,29 @@ Merge all new code into `deploy` and push to `origin`.
 
 ## Configuration
 
-In the Peer5 repo run:
+All configuration is done in the `config.js` file in.
 
-```
-> grunt admin
-```
-
-This should update the `config.js` file in this repo from the `mongo-express.config.js`
-in the Peer5 repo.
+An example is given in `config.default.js`.
 
 ## Setting up users
 
-Copy a file called `admins.json` to the root of the project.
+Create a file called `admins.json` at the root.
 
 The contents should follow the example in `admins.example.json` mapping usernames to passwords.
-
-Run:
-
-```
-> grunt admins
-```
 
 ## Pulling latest
 
 On the remote machine pull latest `deploy` branch.
 
 Copy the `admins.json` and `config.js` files to the root of this project on the remote.
+
+When on the remote machine run:
+
+```
+> grunt admins
+```
+
+That should hash the passwords in `admins.json.
 
 ## Running with forever
 
@@ -44,7 +41,7 @@ Run the `run-test.sh` script.
 
 ## Boom
 
-Open browser at http://peer5.com:8081/
+Open browser at http://<that-domain>:8081/
 
 ## Note
 
