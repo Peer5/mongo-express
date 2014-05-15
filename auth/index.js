@@ -61,8 +61,7 @@ module.exports = function (app) {
 
     return {
         authenticate         : passport.authenticate.bind(passport, 'local', { successRedirect: config.site.baseUrl,
-                                   failureRedirect: config.site.baseUrl + 'login',
-                                   failureFlash: true }),
+                                   failureRedirect: config.site.baseUrl + 'login' }),
         requireAuthentication: function (req, res, next) {
             if ( req.isAuthenticated() ) {
                 next();
