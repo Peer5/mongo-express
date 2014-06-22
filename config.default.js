@@ -45,7 +45,8 @@ module.exports = {
     baseUrl: '/',
     port: 8081,
     cookieSecret: 'cookiesecret',
-    sessionSecret: 'sessionsecret'
+    sessionSecret: 'sessionsecret',
+    cookieKeyName: 'mongo-express'
 
     //  >>>>  if you want to restrict access to the app add an admins.json file and uncomment the line below:
     , admins: require('./admins.json')
